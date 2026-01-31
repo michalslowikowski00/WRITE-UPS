@@ -4,18 +4,19 @@
 Get the information hidden in etc/flag1.
 # Recon:
 Open the URL and explore what's in there. 
-![[Screenshot 2026-01-31 at 20.12.25.png]]
+
+`![[Screenshot 2026-01-31 at 20.12.25.png]]`
 
 The first thing that cought my eye was the yellow banner with information.
 `The input form is broken! You need to send `POST` request with `file` parameter!`
 Ok, first tip noticed. Second thing I've done was using the input. I set the `foobar` inside the input, and fire the Include button.
 
-![[Screenshot 2026-01-31 at 20.12.25.png]]
+`![[Screenshot 2026-01-31 at 20.12.25.png]]`
 
 No error on the frontend, but URL has changed to following
 http://10.80.191.5/challenges/chall1.php?file=foobar#
 
-![[Screenshot 2026-01-31 at 20.17.26.png]]
+`![[Screenshot 2026-01-31 at 20.17.26.png]]`
 
 Next thing I've done was open the app Caido, and run the same request to check what's in there.
 Nothing was there, the form wasn't sent, so I reloaded the page to trigger anything. That helped. I got the http history.
@@ -26,7 +27,7 @@ I saw the GET request with parameter `?files=foobar`. I thought that is the entr
 `etc/flag1`, `../../../../etc/flag1` `etc/flag1%00`, `../../../../etc/flag1%00`. Nothing happened. No error on the frontend. I've changed the http method to the POST with no result. 
 I sent the request to the Automate feature in Caido to set more path traversal options, but it ended with nothing.
 
-![[Screenshot 2026-01-31 at 20.27.04.png]]
+`![[Screenshot 2026-01-31 at 20.27.04.png]]`
 
 I haven't idea what to do next. 
 I left the challenge for a while and get back to it later.
