@@ -1,5 +1,6 @@
 # Challenge
-Get the information hidden in etc/flag1.
+https://tryhackme.com/room/fileinc?taskNo=8&sharerId=68247202511dfcd72c9cf524 
+Capture Flag1 at /etc/flag1
 
 # Information gathering
 The first thing that cought my eye was the yellow banner with information.
